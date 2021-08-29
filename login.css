@@ -4,16 +4,33 @@
 	font-family : sans_serif;
 }
 
-body {
-	height:  800px;
-	background : linear-gradient(to bottom, #66ffff 0%, #ffcc80 100%);
+nav{
+	height: 50px;
+	background-color: black;
+	color: white;
+	place-self: front;
+}
+nav h2{
+	font-size: 32px;
+	padding-left: 10px;
+	padding-top: 5px;
+}
 
+body {
+	height:  100vh;
+	background : linear-gradient(to bottom, #66ffff 0%, #ffcc80 100%);
+	opacity: 100%;
+}
+
+body h1{
+	text-align: center;
+	padding-top: 10px;
 }
 
 
 .login-page{
 	width: 360px;
-	padding: 10% 0 0;
+	padding: 20px 0 0;
 	margin: auto;
 
 }
@@ -23,7 +40,7 @@ body {
 	z-index: 1;
 	max-width: 360px;
 	margin: 0 auto 10px;
-	padding: 45px;
+	padding: 0px;
 	text-align: center;
 }
 
@@ -31,9 +48,9 @@ body {
 	font-family: sans-serif;
 	outline: 1;
 	width: 100%;
-	border: 0;
+	border: 10;
 	margin: 0 0 15PX;
-	padding: 15px;
+	padding: 10px;
 	box-sizing: border-box;
 	font-size: 14px;
 }
@@ -49,7 +66,7 @@ body {
 		border: 0;
 		border-radius: 5px;
 		background-color: white ;
-		box-shadow: 0 9px #999;
+		box-shadow: 0 3px #999;
 }
 
 .form button:hover{
@@ -65,3 +82,4 @@ body {
 .form .register-form{
 	display: none;
 }
+
