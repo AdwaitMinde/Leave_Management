@@ -83,3 +83,11 @@ body h1{
 	display: none;
 }
 
+body .container{
+	width: 80vw;
+	height: 40vh;
+	background-color: white;
+	border-radius: 25px;
+	
+
+}
