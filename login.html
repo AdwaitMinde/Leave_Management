@@ -1,46 +1,99 @@
 <html>
-	<head>
-	<title>login and Registration</title>
-		<link rel="stylesheet" href="login.css">
-	</head>
-	<body>
-		<nav>
-			<h2>Leave Management system</h2>
-		</nav>
-		<div class="login-page">
-		<div class="form">
-			<form class="register-form">
-				<h1>Register</h1>
-				<input type="text" placeholder="username"/>
-				<input type="text" placeholder="password"/>
-				<input type="text" placeholder="email"/>
-				<input type="text" placeholder="contact number"/>
-				<br></br>
-				<button>Create</button>
-				<p class="message">Already Registered?  <a href="#">Login</a> </p>
-			</form>
+    <head>
+        <title>login and Registration</title>
+        <link rel="stylesheet" href="login.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-			<form class="login-form">
-				<h1>Login</h1>
-			<input type="text" placeholder="username"/>
-			<input type="password" placeholder="password"/>
-			<br></br>
-			<button>Login</button>
-				<p class="message">Not Registered? <a href="#">Register</a> </p>
-			</form>
-		</div>
-	</div>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<script src='https://code.jquery.com/jquery-3.6.0.min.js'>
-	</script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href='login.html' class="navbar-brand">Leave Management system</a>
+                </div>
+            </div> 
+        </nav>
+        <div class="container onemoreMargin">
+            <div class="login-page loginDivPad bgLogin">
+                
+                <div class="form">
+                    <form class="register-form">
+                        <h1>Register</h1>
+                        <div class="input-group loginPad">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control m-3" type="text"
+                            placeholder="Username" />
+                        </div>
+                        <div class="input-group loginPad">
+                            <span class="input-group-addon"><i class="glyphicon
+                                    glyphicon-lock"></i></span>
+                            <input class="form-control m-3" type="text"
+                            placeholder="Password" />
+                        </div>
+                        <div class="input-group loginPad">
+                            <span class="input-group-addon"><i class="glyphicon
+                                    glyphicon-lock"></i></span>
+                            <input class="form-control m-3" type="text"
+                            placeholder="Re-enterPassword" />
+                        </div>
+                        <div class="input-group loginPad">
+                            <span class="input-group-addon"><i class="glyphicon
+                                    glyphicon-envelope"></i></span>
+                            <input class="form-control m-3" type="text"
+                            placeholder="Email" />
+                        </div>
+                        <div class="input-group loginPad">
+                            <span class="input-group-addon"><i class="glyphicon
+                                    glyphicon-phone"></i></span>
+                            <input class="form-control m-3" type="text"
+                            placeholder="Contact No." />
+                        </div>
+
+                        <p class="message">Already Registered?  <a href="#">Login</a> </p>
+                        <br></br>
+                        <button>Create</button>
+                    </form>
+                    <form class="login-form">
+                        <h1>Login</h1>
+                        <div class="input-group loginPad">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control m-3" type="text"
+                            placeholder="Username"/>
+                        </div>
+                            <div class="input-group passwordPad">
+                            <span class="input-group-addon"><i class="glyphicon
+                                         glyphicon-lock"></i></span>
+                            <!--put a error message when password is wrong using-->
+                            <!--glyphicon-remove-->
+                            <input type="password" class="form-control" placeholder="password"/>
+                            <div class="row"></div>
+                        </div>                   
+                        <br>
+<p class="message">Not Registered? <a href="#">Register</a> </p>
+
+                        <button >Login</button>
+                </div>     
+                <!--<p class="message">Not Registered? <a href="#">Register</a> </p>-->
+                    </form>
+            </div>
+        </div>
+
+        </div>        <script src='https://code.jquery.com/jquery-3.6.0.min.js'>
+    </script>
 
 
-	<script>
-		$('.message a').click(function(){
-		$('form').animate({height: "toggle",opacity: "toggle"}, "slow");
+    <script>
+        $('.message a').click(function(){
+                    $('form').animate({height: "toggle",opacity: "toggle"}, "slow");
 
-	});
-	</script>
+                });
+    </script>
 
-	</body>
+    </body>
 </html>

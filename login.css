@@ -18,19 +18,21 @@ nav h2{
 
 body {
 	height:  100vh;
-	background : linear-gradient(to bottom, #66ffff 0%, #ffcc80 100%);
+	/*background : linear-gradient(to bottom, #66ffff 0%, #ffcc80 100%);*/
 	opacity: 100%;
 }
 
 body h1{
 	text-align: center;
 	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 40px;
 }
 
 
 .login-page{
 	width: 360px;
-	padding: 20px 0 0;
+	padding: 10px 0 0;
 	margin: auto;
 
 }
@@ -63,14 +65,15 @@ body h1{
 		margin: 20px 0;
 		padding: 10px 15px;
 		width: 50%;
-		border: 0;
+		border: 1;
 		border-radius: 5px;
 		background-color: white ;
-		box-shadow: 0 3px #999;
+		/*box-shadow: 0 3px #999;*/
 }
 
 .form button:hover{
 	background-color: #3e8e41;
+    color:white;
 }
 
 .form button:active{
@@ -83,11 +86,23 @@ body h1{
 	display: none;
 }
 
-body .container{
-	width: 80vw;
-	height: 40vh;
-	background-color: white;
-	border-radius: 25px;
+/*body .container{*/
+	/*[>width: 80vw;<]*/
+	/*[>height: 40vh;<]*/
+	/*background-color: white;*/
+	/*[>border-radius: 25px;<]*/
 	
 
+/*}*/
+.loginPad{
+    padding-bottom:10px
 }
+.loginDivPad{
+    padding:20px;
+    border-radius:5px;
+        background-color:#D3D3D3
+}
+.onemoreMargin
+ {
+     margin-top:150px;
+ } 

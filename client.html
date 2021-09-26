@@ -1,65 +1,102 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="login.css" type="text/css" media="all">
-        
-        <title>
-            client
-        </title>
+        <title>Client</title>
+        <link rel="stylesheet" href="login.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <nav>
-            <h2>Leave Management system</h2>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href='login.html' class="navbar-brand">Leave Management system</a>
+                </div>
+                 <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>ul
+            </div> 
         </nav>
-        <h1>Leave Request Details</h1>
-        <div class="login-page">
-            
-            <form class="form"action="client_submit" method="get" accept-charset="utf-8">
-            <p>Start Date</p>
-            <input class="input"type="date" name="" id="" value="">
-            <p>End Date</p>
-            <input class="input"type="date" name="" id="" value="">
-            <p>Reason</p>
-            <input class="input"type="text" name="" id="" value="">
-            <p>Address</p>
-            <input class="input"type="text" name="" id="" value=""><br>
-            <button class="submit" name="" id="" value="Submit">Submit</button><br>
-            <button class="button">Cancel</button>
-        </form>
-        </div>
 
-        <!--<div class="container">
-            <div class="row1">
-                <div class="col">
-                    <p>Start Date</p>
-                    <input class="input"type="text" name="" id="" value="">
-                </div>
-                <div class="col">
+        <div class="container">
+            <h1>Leave Request Details</h1>
+            <div class="login-page">
+
+                <form class= "form"action="client_submit" method="get" accept-charset="utf-8">
+                <p>Start Date</p>
+                    <div class="input-group loginPad">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i></span>
+                        <input class="form-control  datepicker" type="date"
+                                                                   />
+                    </div>
+
                     <p>End Date</p>
-                    <input class="input"type="text" name="" id="" value="">
-                </div>
+
+                    <form class= "form"action="client_submit" method="get" accept-charset="utf-8">
+                        <div class="input-group loginPad">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i></span>
+                            <input class="form-control  datepicker" type="date"
+                                                                       />
+                        </div>
+                        <p>Reason</p>
+                        <!--<div class="input-group loginPad col-12-md">-->
+                            <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+                            <textarea class="form-control" rows="5" type="text"
+                                  Placeholder="Reason for Leave" ></textarea>
+                        <!--</div>-->
+
+                        <p>Address</p>
+                        <!--<div class="input-group loginPad">-->
+                            <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+                            <textarea class="form-control" rows="5" type="text"
+                                  Placeholder="Address" ></textarea>
+                        <!--</div>-->
+                        <button class="submit" name="" id="" value="Submit">Submit</button><br>
+                        <button class="button">Cancel</button>
+
+                    </form>
             </div>
-            <div class="row">
-                <div class="col">
-                    <p>Reason</p>
-                    <input class="input"type="text" name="" id="" value="">
-                </div>
-                <div class="col">
-                    <p>Address</p>
-                    <input class="input"type="text" name="" id="" value="">
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <button class="submit" name="" id="" value="Submit">Submit</button>
-                </div>
-                <div class="col">
-                    <button class="button">Cancel</button><br>
-                </div>
-            </div>
-          </div>-->
-    </body>
+
+        </div>   
+        <!--<div class="container">-->
+        <!--<div class="row1">-->
+        <!--<div class="col">-->
+        <!--<p>Start Date</p>-->
+        <!--<input class="input"type="text" name="" id="" value="">-->
+        <!--</div>-->
+        <!--<div class="col">-->
+        <!--<p>End Date</p>-->
+        <!--<input class="input"type="text" name="" id="" value="">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+        <!--<div class="col">-->
+        <!--<p>Reason</p>-->
+        <!--<input class="input"type="text" name="" id="" value="">-->
+        <!--</div>-->
+        <!--<div class="col">-->
+        <!--<p>Address</p>-->
+        <!--<input class="input"type="text" name="" id="" value="">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<br>-->
+        <!--<div class="row">-->
+        <!--<div class="col">-->
+        <!--<button class="submit" name="" id="" value="Submit">Submit</button>-->
+        <!--</div>-->
+        <!--<div class="col">-->
+        <!--<button class="button">Cancel</button><br>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</body>-->
 </html>
