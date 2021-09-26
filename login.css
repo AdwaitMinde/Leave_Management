@@ -25,12 +25,14 @@ body {
 body h1{
 	text-align: center;
 	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 40px;
 }
 
 
 .login-page{
 	width: 360px;
-	padding: 20px 0 0;
+	padding: 10px 0 0;
 	margin: auto;
 
 }
