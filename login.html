@@ -66,18 +66,18 @@
                     <br></br>
                     <input type="submit" value="Submit">
                 </form>
-                <form class="login-form" method="post" onsubmit="return login_validate()" id='loginForm'>
+                <form class="login-form" method="post" action="/Leave_Management/php/login_action.php" onsubmit="return login_validate()" id='loginForm'>
                     <h1>Login</h1>
                     <div class="input-group loginError loginPad">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="loginUsername" class="form-control m-3" type="text" placeholder="Username" />
+                        <input id="loginUsername" name="loginUsername" class="form-control m-3" type="text" placeholder="Username" />
                     </div>
                     <div class="input-group passwordPad">
                         <span class="input-group-addon"><i class="glyphicon
                                                                        glyphicon-lock"></i></span>
                         <!--put a error message when password is wrong using-->
                         <!--glyphicon-remove-->
-                        <input type="password" id="loginPassword" class="form-control" placeholder="password" />
+                        <input type="password" name="loginPassword"id="loginPassword" class="form-control" placeholder="password" />
                         <div class="row"></div>
                     </div>
                     <br>
