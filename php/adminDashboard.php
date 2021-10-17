@@ -24,7 +24,35 @@
     </ul>
             </div> 
         </nav>
+<?php
+  include_once 'connect.php';
+$sql = "SELECT * FROM request";
+$result = $conn->query($sql);
+echo "
 
+    <div class='container' id='full'>
+        <h1 style='color: aliceblue;'>Pending Requests</h1>
+        <table class='table' style='color: aliceblue;'>
+            <tr style='font-size: larger;'>
+                <th  class='col'>Leave Id</th>
+                <th class='col'>Reason</th>
+                <th class='col'>Start Date</th>
+                <th class='col'>End Date</th>
+                <th class='col'>Address</th>
+                <th class='col'>Status</th>
+            </tr>
+";
+// $result=$stmt->get_result();
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td class='col'>".$row["Leave_ID"]."</td><td class='col'>".$row["Employee_ID"]."</td><td class='col'>".$row["Start_Date"]."</td><td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Reason"]."</td>";
+    }
+  } else {
+    echo "0 results";
+  }
+  echo "</table>"
+?>
    
     <div class="container" id="full">
         <h1 style="color: aliceblue;">Pending Requests</h1>
