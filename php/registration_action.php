@@ -60,9 +60,7 @@
     $stmt->bind_param("sisss", $username,$contact,$address,$email,$hashedpassword);
 echo "bind workds";
 $stmt->execute();
-echo "table should accept";
+header("LOCATION:/Leave_Management/login.html?registration=successful");
 
 $stmt->close();
-
-
  ?>

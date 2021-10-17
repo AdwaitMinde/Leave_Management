@@ -14,13 +14,14 @@ nav h2{
 	font-size: 32px;
 	padding-left: 10px;
 	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
-body {
+body .poora {
 	height:  100vh;
 	/*background : linear-gradient(to bottom, #66ffff 0%, #ffcc80 100%);*/
 	opacity: 100%;
-	background-image: url(../Leave_Management/img/purple.jpg);
+	background-image: url(../Leave_Management/img/office.jpg);
 	background-color: violet;
 }
 
@@ -31,6 +32,9 @@ body h1{
 	font-size: 40px;
 }
 
+body #log_back{
+	background-image: url(../Leave_Management/img/office.jpg);
+}
 
 .login-page{
 	width: 360px;
@@ -102,7 +106,7 @@ body h1{
 .loginDivPad{
     padding:20px;
     border-radius:5px;
-        background-color:#D3D3D3
+    background-color:#D3D3D3
 }
 .onemoreMargin
  {
