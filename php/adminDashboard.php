@@ -39,19 +39,24 @@ echo "
                 <th class='col'>Start Date</th>
                 <th class='col'>End Date</th>
                 <th class='col'>Address</th>
-                <th class='col'>Status</th>
+                <th class='col'>Approval</th>
             </tr>
+            <form method='post' >
 ";
 // $result=$stmt->get_result();
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td class='col'>".$row["Leave_ID"]."</td><td class='col'>".$row["Employee_ID"]."</td><td class='col'>".$row["Start_Date"]."</td><td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Reason"]."</td>";
+        echo "<tr><td class='col'>".$row["Leave_ID"]."</td><td class='col'>".$row["Employee_ID"]."</td><td class='col'>".$row["Start_Date"]."</td><td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Address"]."</td>
+        <td> 
+        <input type='submit' value='Approve' name='Approve'>
+        <input type='submit' value='Reject' name='Reject'>
+        ";
     }
   } else {
     echo "0 results";
   }
-  echo "</table>"
+  echo "</form></table>"
 ?>
    
     <div class="container" id="full">

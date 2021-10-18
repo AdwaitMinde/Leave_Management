@@ -1,42 +1,48 @@
 <?php
-  include_once 'connect.php';
+include_once 'connect.php';
 //   $usernamecheck = mysqli_real_escape_string($conn,$_POST['uc']);
 //   $passwordcheck = mysqli_real_escape_string($conn,$_POST['pc']);
 $usernamecheck = $_POST['loginUsername'];
-  $passwordcheck = $_POST['loginPassword'];
+$passwordcheck = $_POST['loginPassword'];
 
-  if(empty($passwordcheck)||empty($usernamecheck))
-  {
+if(empty($passwordcheck)||empty($usernamecheck))
+{
     header("Location:login.php?error=emptyfield");
     exit();
-  }
+}
 else
 {
-    $stmt =  "SELECT Password FROM employee WHERE Name=$usernamecheck";
-    $stmt = $conn->prepare("SELECT Password FROM employee WHERE Name=?");
+    //$stmt =  "SELECT Password FROM employee WHERE Name=$usernamecheck";
+    $stmt = $conn->prepare("SELECT Password,Employeee_ID FROM employee WHERE Name=?");
+
     $stmt->bind_param("s", $usernamecheck);
-echo"query works";
-// $result = $conn->query($query);
+    // $result = $conn->query($query);
+    $stmt->execute();
+    $result=$stmt->get_result();
 
-$stmt->execute();
-$result=$stmt->get_result();
-echo "execute workd";
-
-/* fetch object array */
-while ($row = $result->fetch_row()) {
+    /* fetch object array */
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_row()) {
 
             $temp = password_verify($passwordcheck,$row[0]);
-}
-if($temp==True)
-{
+            //$id=$row[1]
+        }
+        if($temp==True)
+        {
 
         session_start();
-        $_SESSION['table'] = $usernamecheck;
-        header("LOCATION:/Leave_Management/client.html?sucssess");
-        
-}
+
+        //echo $id;
+        //$_SESSION['id'] = $id;
+        header("LOCATION:/Leave_Management/client.php?sucssess");
+
+        }
 
 
+    }
+    else{
+        echo "error"
+    }
 }
 
 //   else
@@ -86,4 +92,4 @@ if($temp==True)
 //   }
 
 
- ?>
+?>
