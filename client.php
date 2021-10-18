@@ -24,6 +24,9 @@
                 <div class="navbar-header">
                     <a href='dashboard.html' class="navbar-brand" style="font-size: 35px;">Leave Management system</a>
                 </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                </ul>
             </div>
         </nav>
 
@@ -72,7 +75,7 @@
                         Placeholder="Address"></textarea>
                     <!--</div>-->
                     <!--<button class="submit" name="" id="" value="Submit" style="color: black;" onclick="validateForm" >Submit</button>-->
-                    <input type="Submit" value="submit" name="submit" id="submit" />
+                    <button class="button" style="color: black;"><a href="dashboard.html">Submit</a></button>
                     <button class="button" style="color: black;"><a href="dashboard.html">Cancel</a></button>
 
                 </form>
