@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashbaord</title>
+    <title>adminDashbaord</title>
         <link rel="stylesheet" href="login.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -13,15 +13,15 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<div style="background-image: url(../img/purple.jpg);">
    <nav class="navbar navbar-inverse " style="height: 60px;">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href='login.html' class="navbar-brand" style="font-size: 35px;" >Leave Management system</a>
                 </div>
                  <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-    </ul>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                </ul>
             </div> 
         </nav>
 <?php
