@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', true);
+error_reporting(E_ALL ^ E_NOTICE);
   include_once 'connect.php';
 //   $usernamecheck = mysqli_real_escape_string($conn,$_POST['uc']);
 //   $passwordcheck = mysqli_real_escape_string($conn,$_POST['pc']);
@@ -28,9 +30,19 @@ while ($row = $result->fetch_row()) {
 if($temp==True)
 {
 
+    $stmt = $conn->prepare("SELECT Employeee_ID FROM employee WHERE Name=?");
+    $stmt->bind_param("s", $usernamecheck);
+$stmt->execute();
+$result=$stmt->get_result();
+
+/* fetch object array */
+while ($row = $result->fetch_row()) {
+
+  $id=$row[0];
+}
         session_start();
-        $_SESSION['table'] = $usernamecheck;
-        header("LOCATION:/Leave_Management/dashboard.html?success");
+        $_SESSION['id'] = $id;
+        header("LOCATION:/Leave_Management/dashboard.php?success");
         
 }
 
