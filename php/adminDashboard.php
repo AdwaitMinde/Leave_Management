@@ -38,7 +38,6 @@ echo "
                 <th class='col'>Reason</th>
                 <th class='col'>Start Date</th>
                 <th class='col'>End Date</th>
-                <th class='col'>Address</th>
                 <th class='col'>Approval</th>
             </tr>
             <form method='post' >
@@ -47,7 +46,7 @@ echo "
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td class='col'>".$row["Leave_ID"]."</td><td class='col'>".$row["Employee_ID"]."</td><td class='col'>".$row["Start_Date"]."</td><td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Address"]."</td>
+        echo "<tr><td class='col'>".$row["Leave_ID"]."</td><td class='col'>".$row["Employee_ID"]."</td><td class='col'>".$row["Start_Date"]."</td><td class='col'>".$row["End_Date"]."</td>
         <td> 
         <input type='submit' value='Approve' name='Approve'>
         <input type='submit' value='Reject' name='Reject'>
@@ -60,7 +59,7 @@ if ($result->num_rows > 0) {
 ?>
    
     <div class="container" id="full">
-        <h1 style="color: aliceblue;">Pending Requests</h1>
+        <!-- <h1 style="color: aliceblue;">Pending Requests</h1>
         <table class="table" style="color: aliceblue;">
             <tr style="font-size: larger;">
                 <th  class="col">Leave Id</th>
@@ -102,8 +101,8 @@ if ($result->num_rows > 0) {
                 <td class="col"></td>
                 <td class="col"></td>
             </tr>
-            </table>
-
+            </table> -->
+<br><br><br><br><br><br><br><br><br><br>
             <h1 style="color: aliceblue;">Leave Details</h1>
         <table class="table" style="color: aliceblue;">
             <tr style="font-size: larger;">

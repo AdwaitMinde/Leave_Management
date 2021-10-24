@@ -18,14 +18,14 @@
 </head>
 
 <body>
-    <div class="fade-in" id="mydiv" style="background-color: cadetblue; height: 140vh; ">
+    <div class="fade-in" id="mydiv" style="background-color: cadetblue; height: 140vh;  ">
         <nav class="navbar navbar-inverse height: 60px;">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href='dashboard.html' class="navbar-brand" style="font-size: 35px;">Leave Management system</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
                 </ul>
             </div>
         </nav>

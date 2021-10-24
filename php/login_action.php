@@ -30,7 +30,7 @@ if($temp==True)
 
         session_start();
         $_SESSION['table'] = $usernamecheck;
-        header("LOCATION:/Leave_Management/client.php?sucssess");
+        header("LOCATION:/Leave_Management/dashboard.html?success");
         
 }
 
