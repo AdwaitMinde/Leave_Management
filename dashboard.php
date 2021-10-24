@@ -13,6 +13,17 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <?php
+    ini_set('display_errors', true);
+    error_reporting(E_ALL ^ E_NOTICE);
+  include_once 'php/connect.php';
+    
+        session_start();
+        $id=$_SESSION['id']        
+       
+       
+       ?>
+
     <div class="poora" style=" height: 100vh; background-image: url(../Leave_Management/img/purple.jpg);"  >
    <nav class="navbar navbar-inverse style=height: 60px;">
             <div class="container-fluid">
@@ -24,40 +35,41 @@
                 </ul>
             </div> 
         </nav>
-        
-   <h1 style="padding-left: 15px; color: aliceblue;">Leave Details</h1>
-    <div class="container" id="full">
-        <table class="table">
-            <tr style="color: white;">
-                <th class="col">Leave Id</th>
-                <th class="col">Reason</th>
-                <th class="col">Start Date</th>
-                <th class="col">End Date</th>
-                <th class="col">Address</th>
-            </tr>
-            <tr class="success">
-                <td class="col">asdflkalfk</td>
-                <td class="col">adsfafd</td>
-                <td class="col">sdfasdfa</td>
-                <td class="col">adsfaf</td>
-                <td class="col">asdfadfaf</td>
-            </tr>
-            <tr class="warning">
-                <td class="col">asdflkalfk</td>
-                <td class="col">adsfafd</td>
-                <td class="col">sdfasdfa</td>
-                <td class="col">adsfaf</td>
-                <td class="col">asdfadfaf</td>
-            </tr>
-            <tr class="row">
-                <td class="col"></td>
-                <td class="col"></td>
-                <td class="col"></td>
-                <td class="col"></td>
-                <td class="col"></td>
-            </tr>
-        </table>
+<?php
 
+
+    $stmt = $conn->prepare("SELECT * FROM request WHERE Employee_ID=?");
+    $stmt->bind_param("i", $id);
+$stmt->execute();
+$result=$stmt->get_result();
+
+echo "
+
+    <div class='container' id='full'>
+        <h1 style='color: aliceblue;'>Leave Details</h1>
+        <table class='table' style='color: aliceblue;'>
+            <tr style='font-size: larger;'>
+                <th class='col'>Reason</th>
+                <th class='col'>Start Date</th>
+                <th class='col'>End Date</th>
+                <th class='col'>Address</th>
+            </tr>
+            <form method='post' >
+";
+// $result=$stmt->get_result();
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td class='col'>".$row["Reason"]."</td><td class='col'>".$row["Start_Date"]."</td><td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Location"]."</td>
+        ";
+    }
+  } else {
+    echo "0 results";
+  }
+  echo "</form></table>"
+
+
+?>        
             <!--<h1 style="text-align: left; padding-left: 20px; font-size: 28px;">Leave Title</h1>-->
             <!--<br>-->
             <!--<p style="text-align: left; padding-left: 20px;">-->
