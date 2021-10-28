@@ -13,6 +13,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="ad">
    <nav class="navbar navbar-inverse height: 60px;">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -51,11 +52,11 @@ echo "
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td class='col'>".$row["Leave_ID"]."</td><td class='col'>".$row["Employee_ID"]."</td><td class='col'>".$row["Start_Date"]."</td>
-        <td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Location"]."</td><td class='col'>".$row["Reason"]."</td>
-        <td>
-<button value='".$row['Leave_ID']."' id='approvebtn'>approve</button>
-<button value='".$row['Leave_ID']."' id='rejectbtn'>reject</button>        
+        echo "<tr><td class='col' style='color: black;'>".$row["Leave_ID"]."</td><td class='col' style='color: black;'>".$row["Employee_ID"]."</td><td class='col' style='color: black;'>".$row["Start_Date"]."</td>
+        <td class='col' style='color: black;'>".$row["End_Date"]."</td><td class='col' style='color: black;'>".$row["Location"]."</td><td class='col' style='color: black;'>".$row["Reason"]."</td>
+        <td style='color: black;'>
+<button value='".$row['Leave_ID']."' id='approvebtn' style='color: green;'>approve</button>
+<button value='".$row['Leave_ID']."' id='rejectbtn' style='color: red;'>reject</button>        
         </td>
         ";
     }
@@ -69,9 +70,9 @@ $result = $conn->query($sql);
 echo "
 
     <div class='container' id='full'>
-        <h1 style='color: aliceblue;'>Pending Requests</h1>
-        <table class='table' style='color: aliceblue;'>
-            <tr style='font-size: larger;'>
+        <h1 style='color: black;'>Pending Requests</h1>
+        <table class='table' style='color: black;'>
+            <tr style='font-size: larger; color: black;'>
                 <th  class='col'>Leave Id</th>
                 <th  class='col'>Employee Id</th>
                 <th class='col'>Start Date</th>
@@ -145,5 +146,6 @@ rejectbtn.addEventListener("click", () => {
     });
 });
     </script>
+    </div>
 </body>
 </html>
