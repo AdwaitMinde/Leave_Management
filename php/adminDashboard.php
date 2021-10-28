@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashbaord</title>
+    <title>Dashboard</title>
         <link rel="stylesheet" href="login.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -13,16 +13,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="ad">
+    <div class="ad"  style="background-image: url(../Leave_Management/img/office.jpg);">
    <nav class="navbar navbar-inverse height: 60px;">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href='login.html' class="navbar-brand" style="font-size: 35px;" >Leave Management system</a>
                 </div>
                  <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
             </div> 
         </nav>
 <?php
@@ -34,9 +34,9 @@
 $result = $conn->query($sql);
 echo "
 
-    <div class='container' id='full'>
-        <h1 style='color: aliceblue;'>Pending Requests</h1>
-        <table class='table' style='color: aliceblue;'>
+    <div class='container' id='full'  style='background-image: url(../Leave_Management/img/office.jpg);'>
+        <h1 style='color: black;'>Pending Requests</h1>
+        <table class='table' style='color: black;'>
             <tr style='font-size: larger;'>
                 <th  class='col'>Leave Id</th>
                 <th  class='col'>Employee Id</th>
