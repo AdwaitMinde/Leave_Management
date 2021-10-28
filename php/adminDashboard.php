@@ -79,6 +79,7 @@ echo "
                 <th class='col'>End Date</th>
                 <th class='col'>Address</th>
                 <th class='col'>Reason</th>
+                <th class='col'>Status</th>
             </tr>
             <form method='post' >
 ";
@@ -89,7 +90,7 @@ if ($result->num_rows > 0) {
         if ($row["Status"]!="pending")
         {
         echo "<tr><td class='col'>".$row["Leave_ID"]."</td><td class='col'>".$row["Employee_ID"]."</td><td class='col'>".$row["Start_Date"]."</td>
-        <td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Location"]."</td><td class='col'>".$row["Reason"]."</td>
+        <td class='col'>".$row["End_Date"]."</td><td class='col'>".$row["Location"]."</td><td class='col'>".$row["Reason"]."</td><td class='col'>".$row["Status"]."</td>
         ";
 }
     }
